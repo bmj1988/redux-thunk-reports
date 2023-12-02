@@ -26,7 +26,7 @@ const ReportForm = ({ report, formType }) => {
       e.preventDefault();
       const patchedReport = await dispatch(thunkUpdateReport(report))
       if (patchedReport.errors) {
-        setErrors(patchedReport)
+        setErrors(patchedReport.errors)
       }
       else {
         navigate(`/reports/${patchedReport.id}`)

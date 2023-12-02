@@ -93,7 +93,7 @@ describe('04 - Create a report at "/reports/new"', () => {
       expect(store.getState()).toEqual({
         reports: { [testPostResponse.id]: testPostResponse }
       });
-      console.log(`!!!!!!!!\n`, screen, `!!!!!!!!\n`)
+
       // Check that it navigates to the show page of newly created report
       expect(screen.getByRole('columnheader', /Report #${id}/)).toBeInTheDocument();
     });
@@ -151,7 +151,7 @@ describe('04 - Create a report at "/reports/new"', () => {
       expect(store.getState()).toEqual({
         reports: { [testPostResponse.id]: testPostResponse }
       });
-      console.log(store.getState())
+
       // Check that it navigates to the show page of newly created report
       expect(screen.getByRole('columnheader', /Report #${id}/)).toBeInTheDocument();
     });
